@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHAT BOT</title>
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/login.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', path='/loginpage.js') }}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="#">
+            
+          </a>
+        </div>
+        <div class="login-signup">
+          <div id="Signup">Sign Up</div>
+          <div class="signuppop">
+            <div class="modal" id="signupModal">
+              <div class="modal-content">
+                <div class="close-button" id="closeButton">&times;</div>
+                <h2 class="hind-bold">Signup Form</h2>
+
+                <form onsubmit="checkUsername(event)">
+                  <label for="username">Username:</label>
+                  <input
+                    type="text"
+                    id="username-signup"
+                    name="username"
+                    placeholder="  User Name"
+                    required
+                  /><br /><br />
+                  
+                  <label for="password">Password:</label>
+                  <input
+                    type="password"
+                    id="password-signup"
+                    name="password"
+                    placeholder="  password"
+                    required
+                  /><br /><br />
+                  <input type="submit" value="Sign Up" id="Signup-submit" />
+
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div id="Login">Login</div>
+          <div class="loginpop">
+            <div class="modal-2" id="loginModal">
+              <div class="modal-content-2">
+                <span class="close-button" id="closeButton-2">&times;</span>
+                <h2 class="hind-bold">Login</h2>
+                <form onsubmit="Login(event)">
+                  <label for="username">Username:</label>
+                  <input
+                    type="text"
+                    id="username-login"
+                    name="username"
+                    placeholder="  User Name"
+                    required
+                  /><br /><br />
+                  
+                  <label for="password">Password:</label>
+                  <input
+                    type="password"
+                    id="password-login"
+                    name="password"
+                    placeholder="  Password"
+                    required
+                  /><br /><br />
+                  <input type="submit" value="Login" id="Login-submit" />
+                </form>
+                <div id="alert">
+                  This Username or Password is incorrect ! Please try again
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="box">
+      <section>
+        
+        <h1 class="head">
+          <span>G</span>
+          <span>H</span>
+          <span>O</span>
+          <span>S</span>
+          <span>T</span>
+          <span>S</span>
+          <span>H</span>
+          <span>A</span>
+          <span>R</span>
+          <span>E</span>
+        </h1>
+        <div class="description">
+          <b class="bold">Welcome to Ghost Share!</b><br /><br />
+          <p>
+            Ghost Share is the ultimate platform for anonymous file sharing.
+            With our vast database and easy-to-use interface, you can upload any
+            file and generate a download link that allows you to access your
+            content from anywhere. The identity of the uploader remains
+            completely anonymous, ensuring your privacy is protected at all
+            times. Share your links through any mode—email, messaging apps, or
+            social media—quickly and securely.
+          </p>
+          <br />
+          <ul>
+            <b class="bold">Why Choose Ghost Share?</b
+            ><br /><br />
+            <li>Anonymity: Upload files without revealing your identity.</li>
+            <li>Vast Database: Store and share any type of file.</li>
+            <li>
+              Universal Access: Download your content from anywhere using a
+              simple link.
+            </li>
+            <li>
+              Flexible Sharing: Distribute links through any preferred method.
+            </li>
+            <br /><br />
+            <b class="bold">How It Works:</b
+            ><br /><br />
+            <li>
+              Upload: Select the file you want to share and upload it to Ghost
+              Share.
+            </li>
+            <li>
+              Generate Link: Receive a unique download link for your file.
+            </li>
+            <li>
+              Share: Distribute the link through email, messaging apps, or
+              social media.
+            </li>
+            <li>
+              Download: Access the file from anywhere using the provided link.
+            </li>
+          </ul>
+          <br />
+          <p>
+            Contact Us: Have questions or need support? Reach out to us at
+            <a href="#" style="text-decoration: none">support@ghostshare.com</a
+            >.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  </body>
+</html>

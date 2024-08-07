@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Manager</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/Homepage0.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', path='/Homepage1.js') }}"></script>
+  </head>
+  <body>
+    <nav class="mainnav">
+      <div class="logo">
+        <a href="#"
+          ></a>
+      </div>
+      <form action="/logout" method="post" >
+      <input type="submit" value="Logout" id="logoutBtn" />
+    </form>
+    </nav>
+    <div class="container">
+      
+      <div id="actions">
+       
+        <button id="uploadFileBtn">Upload File</button>
+      </div>
+      <div id="itemsContainer">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Modified</th>
+              <th>Size</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="itemsTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Modal for creating folders and uploading files -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="folderSection">
+          <h2 style="padding: 5px 0px 20px 0px">Create New Folder :</h2>
+          <input type="text" id="folderName" placeholder=" Folder Name" />
+          <button id="addFolderBtn">Add Folder</button>
+        </div>
+        <div id="fileSection">
+          <h2 style="padding: 5px 0px 20px 0px">Upload File :</h2>
+          <form action="/upload" method="post" enctype="multipart/form-data">
+          <input type="file"  name="file"/>
+          <button type="submit" value='Upload' >Upload File</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="sharelink" id="share_box"></div>
+  </body>
+</html>
